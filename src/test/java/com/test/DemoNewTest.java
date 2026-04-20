@@ -23,7 +23,7 @@ public class DemoNewTest {
   WebDriver driver;
   
   
-  @Test (groups = {"Smoke Test"})
+  @Test 
   public void loginCheck() 
   {
 	  driver.findElement(By.xpath("//a[@id='login2']")).click();
@@ -36,7 +36,7 @@ public class DemoNewTest {
 	  
   }
   
-  @Test(groups = "Regression Test")
+  @Test
   
   public void loginCheckInValPass() 
   {
@@ -50,7 +50,7 @@ public class DemoNewTest {
   }
   
   
-  @Test(groups = "Regression Test")
+  @Test
   
   public void loginCheckInValUserName() 
   {
@@ -63,13 +63,13 @@ public class DemoNewTest {
 	  System.out.println("Username");
   }
   
-  @Test(dependsOnGroups="Regression Test")
+  @Test
   
   public void dependsGroup()
   {
 	  System.out.println("running dependence test ");
   }
-  @BeforeMethod(groups = {"Regression Test"})
+  @BeforeMethod
   public void beforeMethod() 
   {
 	  ChromeOptions options = new ChromeOptions();
@@ -81,7 +81,7 @@ public class DemoNewTest {
   }
   
   
-  @AfterMethod(groups = {"Regression Test"})
+  @AfterMethod
   public void afterMethod()
   {
 	  driver.quit();

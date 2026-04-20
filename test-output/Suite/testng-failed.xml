@@ -2,20 +2,18 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
-    <groups>
-      <run>
-        <include name="Regression Test"/>
-        <include name="SmokeTest"/>
-      </run>
-    </groups>
+    <parameter name="pass" value="admin"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="userName" value="admin"/>
+    <parameter name="url" value="https://www.demoblaze.com/"/>
     <classes>
-      <class name="com.test.DemoNewTest">
+      <class name="com.test.DemoBlazeWithParameter">
         <methods>
-          <include name="loginCheckInValUserName"/>
-          <include name="loginCheck"/>
-          <include name="loginCheckInValPass"/>
+          <include name="beforeTest"/>
+          <include name="afterTest"/>
+          <include name="login" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.test.DemoNewTest -->
+      </class> <!-- com.test.DemoBlazeWithParameter -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
