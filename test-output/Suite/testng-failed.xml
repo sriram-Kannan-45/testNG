@@ -3,14 +3,13 @@
 <suite parallel="methods" data-provider-thread-count="3" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" parallel="methods" name="Test(failed)">
     <classes>
-      <class name="com.test.DemoBlazeDataProviderMain">
+      <class name="com.newTest.LoginDemoBlaze">
         <methods>
+          <include name="loginInvalCheck"/>
           <include name="beforeMethod"/>
-          <include name="loginCheckInValPass" invocation-numbers="0 1"/>
-          <include name="loginCheck"/>
           <include name="afterMethod"/>
         </methods>
-      </class> <!-- com.test.DemoBlazeDataProviderMain -->
+      </class> <!-- com.newTest.LoginDemoBlaze -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

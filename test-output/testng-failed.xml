@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.test.DemoBlazeDataProviderMain">
+      <class name="com.newTest.LoginDemoBlaze">
         <methods>
+          <include name="loginInvalCheck" invocation-numbers="1"/>
           <include name="beforeMethod"/>
-          <include name="loginCheck"/>
           <include name="afterMethod"/>
         </methods>
-      </class> <!-- com.test.DemoBlazeDataProviderMain -->
+      </class> <!-- com.newTest.LoginDemoBlaze -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

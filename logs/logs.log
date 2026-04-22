@@ -1,0 +1,52 @@
+[DEBUG] 2026-04-22 11:42:35.744 [main] PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+[DEBUG] 2026-04-22 11:42:35.749 [main] PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+[INFO ] 2026-04-22 11:42:38.712 [TestNG-PoolService-1] LoginDemoBlaze - Web Openning 
+[DEBUG] 2026-04-22 11:42:41.924 [main] PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+[DEBUG] 2026-04-22 11:42:41.927 [main] PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+[DEBUG] 2026-04-22 11:47:07.112 [main] PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+[DEBUG] 2026-04-22 11:47:07.118 [main] PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+[INFO ] 2026-04-22 11:47:10.691 [TestNG-PoolService-1] LoginDemoBlaze - Web Openning
+[INFO ] 2026-04-22 11:47:10.787 [TestNG-PoolService-1] LoginDemoBlaze - Login clicking..
+[INFO ] 2026-04-22 11:47:11.417 [TestNG-PoolService-1] LoginDemoBlaze - User Name Entering 
+[INFO ] 2026-04-22 11:47:11.488 [TestNG-PoolService-1] LoginDemoBlaze - PassWord Entering 
+[WARN ] 2026-04-22 11:47:11.560 [TestNG-PoolService-1] LoginDemoBlaze - Please use Dynamic WebElement
+[DEBUG] 2026-04-22 11:47:14.469 [main] PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+[DEBUG] 2026-04-22 11:47:14.474 [main] PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+[DEBUG] 2026-04-22 11:54:10.257 [main] PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+[DEBUG] 2026-04-22 11:54:10.262 [main] PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+[INFO ] 2026-04-22 11:54:13.481 [TestNG-PoolService-1] LoginDemoBlaze - Web Openning
+[INFO ] 2026-04-22 11:54:13.561 [TestNG-PoolService-1] LoginDemoBlaze - Login clicking..
+[INFO ] 2026-04-22 11:54:14.202 [TestNG-PoolService-1] LoginDemoBlaze - User Name Entering 
+[INFO ] 2026-04-22 11:54:14.259 [TestNG-PoolService-1] LoginDemoBlaze - PassWord Entering 
+[WARN ] 2026-04-22 11:54:14.334 [TestNG-PoolService-1] LoginDemoBlaze - Please use Dynamic WebElement
+[DEBUG] 2026-04-22 11:54:16.626 [main] PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+[DEBUG] 2026-04-22 11:54:16.626 [main] PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+[ERROR] 2026-04-22 11:54:21.437 [TestNG-PoolService-1] LoginDemoBlaze - wrong password 
+[DEBUG] 2026-04-22 12:01:45.715 [TestNG-test-Test-3] PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+[DEBUG] 2026-04-22 12:01:45.715 [TestNG-test-Test-2] PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+[DEBUG] 2026-04-22 12:01:45.721 [TestNG-test-Test-2] PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+[DEBUG] 2026-04-22 12:01:45.721 [TestNG-test-Test-3] PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+[INFO ] 2026-04-22 12:01:50.466 [TestNG-PoolService-1] LoginDemoBlaze - Web Openning
+[INFO ] 2026-04-22 12:01:50.566 [TestNG-PoolService-1] LoginDemoBlaze - Login clicking..
+[INFO ] 2026-04-22 12:01:51.241 [TestNG-PoolService-1] LoginDemoBlaze - User Name Entering 
+[INFO ] 2026-04-22 12:01:51.290 [TestNG-PoolService-1] LoginDemoBlaze - PassWord Entering 
+[WARN ] 2026-04-22 12:01:51.372 [TestNG-PoolService-1] LoginDemoBlaze - Please use Dynamic WebElement
+[ERROR] 2026-04-22 12:01:51.936 [TestNG-PoolService-1] LoginDemoBlaze - wrong password 
+[DEBUG] 2026-04-22 12:08:30.203 [main] PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+[DEBUG] 2026-04-22 12:08:30.209 [main] PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+[DEBUG] 2026-04-22 12:08:30.557 [TestNG-PoolService-1] LoginDemoBlaze - Starting browser
+[INFO ] 2026-04-22 12:08:31.733 [TestNG-PoolService-1] LoginDemoBlaze - Valid login test started
+[DEBUG] 2026-04-22 12:08:35.963 [TestNG-PoolService-1] LoginDemoBlaze - Opening login popup
+[DEBUG] 2026-04-22 12:08:36.047 [TestNG-PoolService-1] LoginDemoBlaze - Entering credentials
+[DEBUG] 2026-04-22 12:08:36.772 [TestNG-PoolService-1] LoginDemoBlaze - Verifying login success
+[INFO ] 2026-04-22 12:08:39.144 [TestNG-PoolService-1] LoginDemoBlaze - Valid login passed
+[DEBUG] 2026-04-22 12:08:39.427 [TestNG-PoolService-1] LoginDemoBlaze - Browser closed
+[DEBUG] 2026-04-22 12:08:39.438 [main] PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+[DEBUG] 2026-04-22 12:08:39.440 [main] PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+[DEBUG] 2026-04-22 12:08:39.464 [TestNG-PoolService-1] LoginDemoBlaze - Starting browser
+[INFO ] 2026-04-22 12:08:40.192 [TestNG-PoolService-1] LoginDemoBlaze - Invalid login test started
+[DEBUG] 2026-04-22 12:08:43.221 [TestNG-PoolService-1] LoginDemoBlaze - Entering invalid credentials
+[DEBUG] 2026-04-22 12:08:43.922 [TestNG-PoolService-1] LoginDemoBlaze - Waiting for alert
+[ERROR] 2026-04-22 12:08:44.970 [TestNG-PoolService-1] LoginDemoBlaze - Login failed message: Wrong password.
+[INFO ] 2026-04-22 12:08:44.981 [TestNG-PoolService-1] LoginDemoBlaze - Invalid login passed
+[DEBUG] 2026-04-22 12:08:45.233 [TestNG-PoolService-1] LoginDemoBlaze - Browser closed
