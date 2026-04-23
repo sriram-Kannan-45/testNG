@@ -3,8 +3,10 @@ package com.newTest;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Listeners;
 
 import com.utilities.ExcelUtils;
+import com.listeners.SimpleListener;
 
 import java.time.Duration;
 
@@ -20,6 +22,7 @@ import org.testng.Assert;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+@Listeners(SimpleListener.class)
 public class LoginDemoBlaze {
 
     private static final ThreadLocal<WebDriver> driver = new ThreadLocal<>();
@@ -27,81 +30,98 @@ public class LoginDemoBlaze {
 
     @BeforeMethod
     public void setup() {
-        log.debug("Starting browser");
-        driver.set(new ChromeDriver());
+        try {
+            log.debug("Starting browser");
+            driver.set(new ChromeDriver());
+        } catch (Exception e) {
+            log.error("Error while launching browser", e);
+            throw e;
+        }
     }
 
     @Test(dataProvider = "validData", dataProviderClass = ExcelUtils.class)
     public void loginCheck(String name, String pass) {
 
-        WebDriver driver1 = driver.get();
-        log.info("Valid login test started");
+        try {
+            WebDriver driver1 = driver.get();
+            log.info("Valid login test started");
 
-        driver1.manage().window().maximize();
-        driver1.get("https://www.demoblaze.com/");
+            driver1.manage().window().maximize();
+            driver1.get("https://www.demoblaze.com/");
 
-        WebDriverWait wait = new WebDriverWait(driver1, Duration.ofSeconds(15));
+            WebDriverWait wait = new WebDriverWait(driver1, Duration.ofSeconds(15));
 
-        log.debug("Opening login popup");
-        driver1.findElement(By.id("login2")).click();
+            log.debug("Opening login popup");
+            driver1.findElement(By.id("login2")).click();
 
-        log.debug("Entering credentials");
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("loginusername"))).sendKeys(name);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("loginpassword"))).sendKeys(pass);
+            log.debug("Entering credentials");
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("loginusername"))).sendKeys(name);
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("loginpassword"))).sendKeys(pass);
 
-        driver1.findElement(By.xpath("//*[@id='logInModal']/div/div/div[3]/button[2]")).click();
+            driver1.findElement(By.xpath("//*[@id='logInModal']/div/div/div[3]/button[2]")).click();
 
-        log.debug("Verifying login success");
+            WebElement user = wait.until(
+                    ExpectedConditions.visibilityOfElementLocated(By.id("nameofuser"))
+            );
 
-        WebElement user = wait.until(
-                ExpectedConditions.visibilityOfElementLocated(By.id("nameofuser"))
-        );
+            Assert.assertTrue(user.getText().contains("Welcome"));
 
-        Assert.assertTrue(user.getText().contains("Welcome"));
+            log.info("Valid login passed");
 
-        log.info("Valid login passed");
+        } catch (Exception e) {
+            log.error("Valid login test failed", e);
+            Assert.fail("Test failed due to exception: " + e.getMessage());
+        }
     }
 
     @Test(dataProvider = "invalidData", dataProviderClass = ExcelUtils.class)
     public void loginInvalCheck(String name, String pass) {
 
-        WebDriver driver1 = driver.get();
-        log.info("Invalid login test started");
+        try {
+            WebDriver driver1 = driver.get();
+            log.info("Invalid login test started");
 
-        driver1.manage().window().maximize();
-        driver1.get("https://www.demoblaze.com/");
+            driver1.manage().window().maximize();
+            driver1.get("https://www.demoblaze.com/");
 
-        WebDriverWait wait = new WebDriverWait(driver1, Duration.ofSeconds(15));
+            WebDriverWait wait = new WebDriverWait(driver1, Duration.ofSeconds(15));
 
-        driver1.findElement(By.id("login2")).click();
+            driver1.findElement(By.id("login2")).click();
 
-        log.debug("Entering invalid credentials");
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("loginusername"))).sendKeys(name);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("loginpassword"))).sendKeys(pass);
+            log.debug("Entering invalid credentials");
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("loginusername"))).sendKeys(name);
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("loginpassword"))).sendKeys(pass);
 
-        driver1.findElement(By.xpath("//*[@id='logInModal']/div/div/div[3]/button[2]")).click();
+            driver1.findElement(By.xpath("//*[@id='logInModal']/div/div/div[3]/button[2]")).click();
 
-        log.debug("Waiting for alert");
+            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
 
-        Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+            String msg = alert.getText();
+            log.error("Login failed message: {}", msg);
 
-        String msg = alert.getText();
-        log.error("Login failed message: {}", msg);
+            Assert.assertEquals(msg, "Wrong password.");
 
-        Assert.assertEquals(msg, "Wrong password.");
+            alert.accept();
 
-        alert.accept();
+            log.info("Invalid login passed");
 
-        log.info("Invalid login passed");
+        } catch (Exception e) {
+            log.error("Invalid login test failed", e);
+            Assert.fail("Test failed due to exception: " + e.getMessage());
+        }
     }
 
     @AfterMethod
     public void teardown() {
-        WebDriver driver1 = driver.get();
+        try {
+            WebDriver driver1 = driver.get();
 
-        if (driver1 != null) {
-            driver1.quit();
-            log.debug("Browser closed");
+            if (driver1 != null) {
+                driver1.quit();
+                log.debug("Browser closed");
+            }
+        } catch (Exception e) {
+            log.error("Error during browser teardown", e);
         }
     }
 }

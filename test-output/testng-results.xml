@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-22T12:08:30 IST" name="Default suite" finished-at="2026-04-22T12:08:45 IST" duration-ms="15219">
+  <suite started-at="2026-04-23T19:52:05 IST" name="Default suite" finished-at="2026-04-23T19:52:28 IST" duration-ms="22990">
     <groups>
     </groups>
-    <test started-at="2026-04-22T12:08:30 IST" name="Default test" finished-at="2026-04-22T12:08:45 IST" duration-ms="15219">
+    <test started-at="2026-04-23T19:52:05 IST" name="Default test" finished-at="2026-04-23T19:52:28 IST" duration-ms="22990">
       <class name="com.newTest.LoginDemoBlaze">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.newTest.LoginDemoBlaze@6cce16f4]" started-at="2026-04-22T12:08:30 IST" name="setup" finished-at="2026-04-22T12:08:31 IST" duration-ms="1176" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.newTest.LoginDemoBlaze@416c58f5]" started-at="2026-04-23T19:52:06 IST" name="setup" finished-at="2026-04-23T19:52:17 IST" duration-ms="11450" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="loginCheck(java.lang.String,java.lang.String)[pri:0, instance:com.newTest.LoginDemoBlaze@6cce16f4]" started-at="2026-04-22T12:08:31 IST" name="loginCheck" data-provider="validData" finished-at="2026-04-22T12:08:39 IST" duration-ms="7416" status="PASS">
+        <test-method signature="loginCheck(java.lang.String,java.lang.String)[pri:0, instance:com.newTest.LoginDemoBlaze@416c58f5]" started-at="2026-04-23T19:52:17 IST" name="loginCheck" data-provider="validData" finished-at="2026-04-23T19:52:23 IST" duration-ms="5642" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -27,15 +27,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginCheck -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.newTest.LoginDemoBlaze@6cce16f4]" started-at="2026-04-22T12:08:39 IST" name="teardown" finished-at="2026-04-22T12:08:39 IST" duration-ms="283" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.newTest.LoginDemoBlaze@416c58f5]" started-at="2026-04-23T19:52:23 IST" name="teardown" finished-at="2026-04-23T19:52:23 IST" duration-ms="304" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.newTest.LoginDemoBlaze@6cce16f4]" started-at="2026-04-22T12:08:39 IST" name="setup" finished-at="2026-04-22T12:08:40 IST" duration-ms="723" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.newTest.LoginDemoBlaze@416c58f5]" started-at="2026-04-23T19:52:23 IST" name="setup" finished-at="2026-04-23T19:52:24 IST" duration-ms="844" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="loginInvalCheck(java.lang.String,java.lang.String)[pri:0, instance:com.newTest.LoginDemoBlaze@6cce16f4]" started-at="2026-04-22T12:08:40 IST" name="loginInvalCheck" data-provider="invalidData" finished-at="2026-04-22T12:08:44 IST" duration-ms="4794" status="PASS">
+        <test-method signature="loginInvalCheck(java.lang.String,java.lang.String)[pri:0, instance:com.newTest.LoginDemoBlaze@416c58f5]" started-at="2026-04-23T19:52:24 IST" name="loginInvalCheck" data-provider="invalidData" finished-at="2026-04-23T19:52:28 IST" duration-ms="3509" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -51,7 +51,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginInvalCheck -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.newTest.LoginDemoBlaze@6cce16f4]" started-at="2026-04-22T12:08:44 IST" name="teardown" finished-at="2026-04-22T12:08:45 IST" duration-ms="250" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.newTest.LoginDemoBlaze@416c58f5]" started-at="2026-04-23T19:52:28 IST" name="teardown" finished-at="2026-04-23T19:52:28 IST" duration-ms="240" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
